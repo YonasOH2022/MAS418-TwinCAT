@@ -3,10 +3,18 @@
   <POU Name="MAIN" Id="{fbdefcff-22c6-41a5-a6dd-64f63b0ba9a4}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	bEnable : BOOL := FALSE;
+	bStart : BOOL := FALSE; 
+	switch: BOOL;
+	Lamp: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[bEnable := bStart; 
+bStart :=switch;
+bEnable :=Lamp;
+
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
